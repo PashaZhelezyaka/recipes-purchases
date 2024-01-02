@@ -1,7 +1,6 @@
 import {
   Component,
   OnInit,
-  ElementRef,
   ViewChild, OnDestroy
 } from '@angular/core';
 
