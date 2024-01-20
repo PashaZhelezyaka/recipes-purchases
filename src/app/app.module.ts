@@ -10,7 +10,6 @@ import { RecipeService } from "./recipes/recipe.service";
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { SharedModule } from "./shared/shared.module";
-import { AuthModule } from "./auth/auth.module";
 import { HeaderComponent } from "./header/header.component";
 
 @NgModule({
