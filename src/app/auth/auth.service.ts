@@ -5,6 +5,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { throwError, BehaviorSubject } from 'rxjs';
 
 import { User } from './user.model';
+import { environment } from "../../environments/environment";
 
 export interface AuthResponseData {
   kind: string;
@@ -19,7 +20,7 @@ export interface AuthResponseData {
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   user$ = new BehaviorSubject<User>(null);
-  private webKey = 'AIzaSyCOJeehLbWEVqdq-hgaZfIxHnd8P7poRcw';
+  private webKey = environment.keyFirebase;
   private timer: any
 
   constructor(private http: HttpClient, private router: Router) {}
